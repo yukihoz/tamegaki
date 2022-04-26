@@ -32,15 +32,12 @@ st.image('tamegaki2.png')
 st.markdown('''
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@ninofku" />
-    <meta name="twitter:title" content="(3)ページのタイトル" />
-    <meta name="twitter:description" content="(4)ページの説明文" />
-    <meta name="twitter:image" content="tamegaki2.png" />
 ''',
         unsafe_allow_html=True
 )
 
 st.markdown('''
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="http://www.example.com/" data-show-count="false">Tweet</a>
+    <a href="https://twitter.com/share?" class="twitter-share-button" data-url="http://www.example.com/" data-show-count="false">Tweet</a>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     ''',
         unsafe_allow_html=True
