@@ -14,7 +14,7 @@ input = st.text_input('応援メッセージを入れてね', '頑張ってね�
 draw.text((50,650), input ,(75,75,75),font=font)
 
 img.save(r'tamegaki2.png')
-
+ 
 st.image('tamegaki2.png')
 
 st.markdown('''
