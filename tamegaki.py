@@ -1,18 +1,20 @@
 import streamlit as st
 
-from PIL import Image
-from PIL import ImageFont
-from PIL import ImageDraw
-
 st.markdown('''
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@ninofku" />
-    <meta name="twitter:title" content="(3)ページのタイトル" />
-    <meta name="twitter:description" content="(4)ページの説明文" />
-    <meta name="twitter:image" content="tamegaki2.png" />
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# prefix属性: http://ogp.me/ns/ prefix属性#">
+    <meta property="og:url" content="https://twitter.com/ninofku" />
+    <meta property="og:type" content=" ページの種類" />
+    <meta property="og:title" content=" ページの タイトル" />
+    <meta property="og:description" content=" ページのディスクリプション" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:image" content="tamegaki2.png" />
 ''',
         unsafe_allow_html=True
 )
+
+from PIL import Image
+from PIL import ImageFont
+from PIL import ImageDraw
 
 img = Image.open(r"tamegaki.png")
 draw = ImageDraw.Draw(img)
@@ -27,6 +29,15 @@ img.save(r'tamegaki2.png')
  
 st.image('tamegaki2.png')
 
+st.markdown('''
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ninofku" />
+    <meta name="twitter:title" content="(3)ページのタイトル" />
+    <meta name="twitter:description" content="(4)ページの説明文" />
+    <meta name="twitter:image" content="tamegaki2.png" />
+''',
+        unsafe_allow_html=True
+)
 
 st.markdown('''
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="http://www.example.com/" data-show-count="false">Tweet</a>
