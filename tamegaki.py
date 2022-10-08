@@ -1,17 +1,5 @@
 import streamlit as st
 
-st.markdown('''
-    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# prefix属性: http://ogp.me/ns/ prefix属性#">
-    <meta property="og:url" content="https://twitter.com/ninofku" />
-    <meta property="og:type" content=" ページの種類" />
-    <meta property="og:title" content=" ページの タイトル" />
-    <meta property="og:description" content=" ページのディスクリプション" />
-    <meta property="og:site_name" content="サイト名" />
-    <meta property="og:image" content="tamegaki2.png" />
-''',
-        unsafe_allow_html=True
-)
-
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
@@ -28,6 +16,18 @@ draw.text((50,650), input ,(75,75,75),font=font)
 img.save(r'tamegaki2.png')
  
 st.image('tamegaki2.png')
+
+st.markdown('''
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# prefix属性: http://ogp.me/ns/ prefix属性#">
+    <meta property="og:url" content="https://twitter.com/ninofku" />
+    <meta property="og:type" content=" ページの種類" />
+    <meta property="og:title" content=" ページの タイトル" />
+    <meta property="og:description" content=" ページのディスクリプション" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:image" content="tamegaki2.png" />
+''',
+        unsafe_allow_html=True
+)
 
 st.markdown('''
     <meta name="twitter:card" content="summary_large_image" />
@@ -57,4 +57,3 @@ st.markdown('''
 ''',
         unsafe_allow_html=True
 )
-
