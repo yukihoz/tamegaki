@@ -4,6 +4,9 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
 
+import os
+
+
 img = Image.open(r"tamegaki.png")
 draw = ImageDraw.Draw(img)
 font = ImageFont.truetype("Corporate-Logo-Bold-ver2.otf", 40)
@@ -51,9 +54,20 @@ st.markdown('''
         unsafe_allow_html=True
 )
 
+uploaded_file = st.file_uploader("Upload a file")
+
+if uploaded_file:
+   st.write("Filename: ", uploaded_file.name)
 
 st.markdown('''
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ''',
         unsafe_allow_html=True
 )
+
+html = "<h1>world</h1>"
+st.components.v1.html(html)
+st.components.v1.html("<center>" + html + "</center>")
+
+path = os.path.abspath("tamegaki2.png")
+path
